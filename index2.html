@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检修技改二屏</title>
+    <link rel="stylesheet" href="css/index1.css">
+    <style>
+        body,div,p,h1,h2,h3,h4,h5,h6,ul,li,ol,ul,dt,dd,input{margin:0;padding:0;}
+        body{font-family: "Microsoft Yahei";}
+        a{text-decoration:none;display:block;}
+        li{list-style:none;}
+        .clear{clear:both;}
+        .main-back{display:block;}
+        
+        .mainDetailsBg{width:8400px;height:4200px;background:url(images/mainDetailsBg.jpg) no-repeat center;}
+        .main-drt-top.main-details{border:1px solid salmon;}
+
+        /*--.main-details 导航详情页面左侧--*/
+        .main-details{width:462px;margin-left:470px;}
+        .main-details li{height:103px;}
+        .main-details .nav-href1{left:495px;}
+        .main-details .nav-href2{left:478px;}
+        .main-details{left:478px;}
+        .main-details .nav-href1,.main-details .nav-href2{opacity:0.5;alpha:filter(opacity=50);}
+        .main-details .nav-href1.active,.main-details .nav-href2.curractive{opacity:1;alpha:filter(opacity=100);}
+
+        /*--.main-details-rt 导航详情页面左侧--*/
+        .main-details-rt{float:left;width:7065px;margin-left:149px;margin-top:340px;}
+        .main-details-rt .datail-rt{display:none;}
+        .main-details-rt .datail-rt.active{display:block;}
+        /*--.main-drt-top .main-details-rt内容--*/
+        .main-drt-top{height:764px;}
+        .main-drt-bottom{width:7001px;height:2842px;background:url(images/popup-alert2.png) no-repeat center;}
+        .process-title{width:100%;height:100px;line-height:100px;margin-bottom:10px;border:3px solid #3e7081;border-radius:30px;background: linear-gradient(#4e7d8e,#295166,#153242);color:#fff;text-align: center;font-size:50px;}
+        .process-chart{padding:183px 10px 140px 35px;height:2518px;}
+
+        /*右部各模块公共样式*/
+        [class^="process1_chart"],[class^="process2_chart"],[class^="process3_chart"],[class^="process4_chart"],
+        [class^="process5_chart"],[class^="process6_chart"],[class^="process7_chart"],[class^="process8_chart"],
+        [class^="process9_chart"],[class^="process10_chart"],[class^="process11_chart"],[class^="process12_chart"],
+        [class^="process14_chart"],[class^="process16_chart"], [class^="process17_chart"],[class^="process18_chart"]
+        {height:1250px;float:left;margin-left:45px;margin-top:10px;margin-bottom:10px;}
+        [class^="process13_chart"],[class^="process15_chart"]{height:1250px;float:left;margin-left:45px;}
+        /*表格公共样式*/
+        .state_table {width:100%;height:1120px;border-bottom:5px solid #285F74;margin-top: 8px;background-color:#163242;}
+        .state_table tr:first-child th{border-top:0;}
+        .state_table tr:nth-child(even){background-color:#1E3B4B;}
+        .state_table_title {height:130px; line-height:130px;}
+        .state_table th,.state_table td{border-top:5px solid #285F74;color:#fff;text-align:center;height:180px; line-height:95px;font-size:45px;}
+		.state_table th{font-size:40px;font-weight:normal;}
+        .state_table tbody {display:block;height:922px;overflow:auto;}
+        .state_table thead, .state_table tbody tr{display:table;width:100%;table-layout:fixed;}
+		.state_table thead {width: calc( 100% - 1em );}
+        /*第一节点*/
+        .process1{width:2526px;height:231px;background:url(images/process1.png) no-repeat center;}
+        /*第二节点*/
+        .process2{width:6984px;height:626px;background:url(images/process2.png) no-repeat center;}
+        .process2_chart1,.process2_chart2,.process2_chart3{width:2245px;position:relative;}
+        #process2_chart1,#process2_chart2,#process2_chart3{width:2245px;height:1134px;}
+        .process2_chart4,.process2_chart5,.process2_chart6{width:2245px;height:1250px;overflow:hidden;}
+        .table21,.table22,.table23{width:100%;}
+        .process2 .state_table tbody{width:2188px;}
+        .table21 thead tr th:first-child,.table22 thead tr th:first-child,.table23 tr td:first-child{width:880px;}
+        .table21 tbody tr td:first-child,.table22 tbody tr td:first-child,.table23 tr td:first-child {width:880px;text-align:left;}
+        /*第三节点*/
+        .process3{width:6984px;height:693px;background:url(images/process3.png) no-repeat center;}
+        .process3_chart1,.process3_chart2{width:3385px;position:relative;}
+        #process3_chart1,#process3_chart2{width:3385px;height:1134px;}
+        .process3_chart3,.process3_chart4{width:3385px;height:1250px;overflow:hidden;}
+        .table31,.table32{width:100%;}
+        .process3 .state_table tbody{width:3328px;}
+        .table31 thead tr th:first-child,.table32 thead tr th:first-child{width:880px;}
+        .table31 tbody tr td:first-child,.table32 tbody tr td:first-child {width:880px;text-align:left;}
+        /*第四节点*/
+        .process4{width:6984px;height:693px;background:url(images/process4.png) no-repeat center;}
+        .process4_chart1,.process3_chart2{width:3385px;position:relative;}
+        #process4_chart1,#process4_chart2{width:3385px;height:1134px;}
+        .process4_chart3{width:6820px;height:1250px;overflow:hidden;}
+        /*第五节点-版本二*/
+        .process5{width:6984px;height:518px;background:url(images/process5.png) no-repeat center;}
+        .process5_chart1,.process5_chart2,.process5_chart3,.process5_chart4,.process5_chart5,.process5_chart6{width:2245px;position:relative;}
+        #process5_chart1,#process5_chart2,#process5_chart3,#process5_chart4,#process5_chart5{width:2245px;height:1134px;}
+        .process5_chart6{height:1250px;overflow:hidden;}
+        /*第六节点*/
+        .process1{width:6984px;height:719px;background:url(images/process6.png) no-repeat center;}
+        /*第七节点*/
+        .process7{width:6984px;height:718px;background:url(images/process7.png) no-repeat center;}
+        .process7_chart1,.process7_chart2,.process7_chart3,.process7_chart4{width:1655px;position:relative;}
+        #process7_chart1,#process7_chart2,#process7_chart3,#process7_chart4{width:1655px;height:1134px;}
+        .process7_chart5{width:2755px;position:relative;}
+        #process7_chart5{width:2755px;height:1115px;}
+        .process7_chart6{width:3970px;}
+        .table71{width:100%;}
+        /*第八节点*/
+        .process8{width:2549px;height:195px;background:url(images/process8.png) no-repeat center;}
+        /*第九节点*/
+        .process9{width:3958px;height:448px;background:url(images/process9.png) no-repeat center;}
+        /*第十节点*/
+        .process10{width:6984px;height:726px;background:url(images/process10.png) no-repeat center;}
+        .process10_chart1,.process10_chart2,.process10_chart3,.process10_chart4{width:1655px;position:relative;}
+        #process10_chart1,#process10_chart2,#process10_chart3,#process10_chart4{width:1655px;height:1134px;}
+        .process10_chart5{width:2755px;position:relative;}
+        #process10_chart5{width:2755px;height:1115px;}
+        .process10_chart6{width:3970px;}
+        .table101{width:100%;}
+        /*第十一节点*/
+        .process11{width:4399px;height:148px;background:url(images/process11.png) no-repeat center;}
+        /*第十二节点*/
+        .process12{width:3551px;height:168px;background:url(images/process12.png) no-repeat center;}
+        /*第十三节点*/
+        .process13{width:6984px;height:376px;background:url(images/process13.png) no-repeat center;}
+        #process13_chart1,#process13_chart2,#process13_chart3{width:2245px;height:1134px;}
+        .process13_chart4,.process13_chart5,.process13_chart6{width:2245px;height:1250px;overflow:hidden;}
+        .table131,.table132,.table133{width:100%;}
+        .process13 .state_table tbody{width:2188px;}
+        /*第十四节点*/
+        .process14{width:4868px;height:341px;background:url(images/process14.png) no-repeat center;}
+        /*第十五节点*/
+        .process15{width:6984px;height:448px;background:url(images/process15.png) no-repeat center;}
+        .process15_chart1,.process15_chart2{width:3385px;position:relative;}
+        #process15_chart1,#process15_chart2{width:3385px;height:1134px;}
+        .process15_chart3,.process15_chart4{width:3385px;height:1250px;overflow:hidden;}
+        .table151,.table152{width:100%;}
+        .process15 .state_table tbody{width:3328px;}
+        /*第十六节点*/
+        .process16{width:3058px;height:196px;background:url(images/process16.png) no-repeat center;}
+        /*第十七节点*/
+        .process17{width:2580px;height:187px;background:url(images/process17.png) no-repeat center;}
+        /*第十八节点*/
+        .process18{width:3764px;height:195px;background:url(images/process18.png) no-repeat center;}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="mainDetailsBg">
+            <p class="main-title">新源公司生产检修技改项目全过程管理监测图</p>
+            <!--返回按钮-->
+            <a href="index1.html" style="width:207px;height:203px;background: url('images/jxjg_backIcon.png') no-repeat;
+             position: absolute;top:138px;left:0;z-index:100;">
+                <span style="color:#fff;font-size:40px;position:relative;top:85px;left:65px;">首页</span></a>
+            <div class="main-lf2 main-details" id="main-lf22">
+                <ul>
+                    <li>
+                        <p class="nav-href1 href-d1 active"><a href="#"><em>五年规划</em><span>运检部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d2"><a href="#"><em>项目储备</em><span>发展部\运检部<br/>一年三批次</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d3"><a href="#"><em>年度计划及预算</em><span>发展部<br/>运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d4"><a href="#"><em>年度工作计划</em><span>运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d5"><a href="#"><em>物资\服务采购申请</em><span>运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d6"><a href="#"><em>批次招标采购</em><span>运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d7"><a href="#"><em>合同签订</em><span>办公室\经法部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d8"><a href="#"><em>物资入库</em><span>物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d9"><a href="#"><em>物资领用</em><span>运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d10"><a href="#"><em>项目实施<br/>服务合同履约</em><span>财务部\运检部\物资部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d11"><a href="#"><em>中间支付</em><span>财务部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d12"><a href="#"><em>竣工验收</em><span>运检部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d13"><a href="#"><em>项目结算</em><span>财务部\运检\审计部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d14"><a href="#"><em>支付</em><span>财务部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href2 href-d15"><a href="#"><em>项目决算</em><span>财务部\运检部\审计部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d16"><a href="#"><em>资料归档</em><span>办公室</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d17"><a href="#"><em>项目关闭</em><span>财务部\运检部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d18"><a href="#"><em>质保金支付</em><span>财务部\运检部</span></a></p>
+                    </li>
+                    <li>
+                        <p class="nav-href1 href-d19"><a><em>结束</em></a></p>
+                    </li>
+                </ul>
+            </div>
+            <!--十八个流程图-->
+            <div class="main-details-rt">
+                <div class="datail-rt datail-rt1 active">
+                    <div class="main-drt-top process1"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt2">
+                    <div class="main-drt-top process2"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process2_chart1">
+                                <p class="process-title">岗位监测-岗位流程监测分析</p>
+                                <div id="process2_chart1"></div>
+                            </div>
+                            <div class="process2_chart2">
+                                <p class="process-title">异动监测：计划下达项目是否来源储备库
+                                </p>
+                                <div id="process2_chart2"></div>
+                            </div>
+                            <div class="process2_chart3">
+                                <p class="process-title">异动监测：纳入储备库项目无可研文号</p>
+                                <div id="process2_chart3"></div>
+                            </div>
+                            <div class="process2_chart4">
+                                <p class="process-title">异动明细-岗位流程监测异动</p>
+                                <table class="state_table table21" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>描述</th>
+                                        <th>年度</th>
+                                        <th>状态</th>
+                                        <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process2_chart5">
+                                <p class="process-title">异动明细：储备库项目是否有可研文号</p>
+                                <table class="state_table table22" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>描述</th>
+                                        <th>年度</th>
+                                        <th>状态</th>
+                                        <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process2_chart6">
+                                <p class="process-title">异动明细：储备库项目是否有可研文号</p>
+                                <table class="state_table table23" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr class="state_table_title">
+                                            <th>描述</th>
+                                            <th>年度</th>
+                                            <th>状态</th>
+                                            <th>审批人</th>
+                                            <th>审批时间</th>
+                                            <th>审批意见</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                            <td>白山厂</td>
+                                            <td>2013</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                            <td>回龙</td>
+                                            <td>2014</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                            <td>回龙</td>
+                                            <td>2015</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt3">
+                    <div class="main-drt-top process3"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process3_chart1">
+                                <p class="process-title">岗位监测-岗位流程监测分析</p>
+                                <div id="process3_chart1"></div>
+                            </div>
+                            <div class="process3_chart2">
+                                <p class="process-title">异动监测-ERP中创建的项目不来自规划计划下达
+                                </p>
+                                <div id="process3_chart2"></div>
+                            </div>
+                            <div class="process3_chart3">
+                                <p class="process-title">异动明细-岗位流程监测异动</p>
+                                <table class="state_table table31" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>描述</th>
+                                        <th>年度</th>
+                                        <th>状态</th>
+                                        <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process3_chart4">
+                                <p class="process-title">异动明细：ERP中创建的项目不在规划计划中</p>
+                                <table class="state_table table32" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>描述</th>
+                                        <th>年度</th>
+                                        <th>状态</th>
+                                        <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt4">
+                    <div class="main-drt-top process4"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process4_chart1">
+                                <p class="process-title">岗位监测-岗位流程监测分析</p>
+                                <div id="process4_chart1"></div>
+                            </div>
+                            <div class="process4_chart2">
+                                <p class="process-title">异动监测：计划下达项目是否来源储备库
+                                </p>
+                                <div id="process4_chart2"></div>
+                            </div>
+                            <div class="process4_chart3">
+                                <p class="process-title">异动监测：纳入储备库项目无可研文号</p>
+                                <div id="process4_chart3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt5">
+                    <div class="main-drt-top process5"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process5_chart1">
+                                <p class="process-title">岗位划分</p>
+                                <div id="process5_chart1"></div>
+                            </div>
+                            <div class="process5_chart2">
+                                <p class="process-title">业务流转</p>
+                                <div id="process5_chart2"></div>
+                            </div>
+                            <div class="process5_chart3">
+                                <p class="process-title">物资类别</p>
+                                <div id="process5_chart3"></div>
+                            </div>
+                            <div class="process5_chart4 clear">
+                                <p class="process-title">项目合规性</p>
+                                <div id="process5_chart4"></div>
+                            </div>
+                            <div class="process5_chart5">
+                                <p class="process-title">需求提报偏差</p>
+                                <div id="process5_chart5"></div>
+                            </div>
+                            <div class="process5_chart6">
+                                <p class="process-title">异动详情</p>
+                                    <table class="state_table" border="0" cellspacing="0" cellpadding="0">
+                                        <tr class="state_table_title">
+                                            <th>异动类型</th>
+                                            <th>单位</th>
+                                            <th>项目类型</th>
+                                            <th>项目编号</th>
+                                            <th>金额（万元）</th>
+                                            <th>负责人</th>
+                                            <th>是否反馈</th>
+                                            <th>整改</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt6">
+                    <div class="main-drt-top process6"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt7">
+                    <div class="main-drt-top process7"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process7_chart1">
+                                <p class="process-title">审批岗位及人数</p>
+                                <div id="process7_chart1"></div>
+                            </div>
+                            <div class="process7_chart2">
+                                <p class="process-title">当前合同签订节点情况</p>
+                                <div id="process7_chart2"></div>
+                            </div>
+                            <div class="process7_chart3">
+                                <p class="process-title">招标周期异常</p>
+                                <div id="process7_chart3"></div>
+                            </div>
+                            <div class="process7_chart4">
+                                <p class="process-title">合同金额超预算异常</p>
+                                <div id="process7_chart4"></div>
+                            </div>
+                            <div class="process7_chart5 clear">
+                                <p class="process-title">合同金额超中标金额异常</p>
+                                <div id="process7_chart5"></div>
+                            </div>
+                            <div class="process7_chart6">
+                                <p class="process-title">异动详情</p>
+                                <table class="state_table table71" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr class="state_table_title">
+                                            <th>异动类型</th>
+                                            <th>单位</th>
+                                            <th>项目类型</th>
+                                            <th>项目编号</th>
+                                            <th>金额（万元）</th>
+                                            <th>负责人</th>
+                                            <th>是否反馈</th>
+                                            <th>整改</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt8">
+                    <div class="main-drt-top process8"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt9">
+                    <div class="main-drt-top process9"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt10">
+                    <div class="main-drt-top process10"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process10_chart1">
+                                <p class="process-title">当前项目实施节点情况</p>
+                                <div id="process10_chart1"></div>
+                            </div>
+                            <div class="process10_chart2">
+                                <p class="process-title">修后总结异常</p>
+                                <div id="process10_chart2"></div>
+                            </div>
+                            <div class="process10_chart3">
+                                <p class="process-title">修前策划异常</p>
+                                <div id="process10_chart3"></div>
+                            </div>
+                            <div class="process10_chart4">
+                                <p class="process-title">开工报告异常</p>
+                                <div id="process10_chart4"></div>
+                            </div>
+                            <div class="process10_chart5 clear">
+                                <p class="process-title">审批岗位及人数</p>
+                                <div id="process10_chart5"></div>
+                            </div>
+                            <div class="process10_chart6">
+                                <p class="process-title">异动详情</p>
+                                <table class="state_table table101" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>异动类型</th>
+                                        <th>单位</th>
+                                        <th>项目类型</th>
+                                        <th>项目编号</th>
+                                        <th>金额（万元）</th>
+                                        <th>负责人</th>
+                                        <th>是否反馈</th>
+                                        <th>整改</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt11">
+                    <div class="main-drt-top process11"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt12">
+                    <div class="main-drt-top process12"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt13">
+                    <div class="main-drt-top process13"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process13_chart1">
+                                <p class="process-title">生产检修结算及时性分析</p>
+                                <div id="process13_chart1"></div>
+                            </div>
+                            <div class="process13_chart2">
+                                <p class="process-title">生产技改结算及时性分析
+                                </p>
+                                <div id="process13_chart2"></div>
+                            </div>
+                            <div class="process13_chart3">
+                                <p class="process-title">结算超概算项目数</p>
+                                <div id="process13_chart3"></div>
+                            </div>
+                            <div class="process13_chart4">
+                                <table class="state_table table131" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr class="state_table_title">
+                                            <th>公司名称</th>
+                                            <th>项目名称</th>
+                                            <th>结算时间</th>
+                                            <th>投运时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                            <td>白山厂</td>
+                                            <td>2013</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                            <td>回龙</td>
+                                            <td>2014</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                            <td>回龙</td>
+                                            <td>2015</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process13_chart5">
+                                <table class="state_table table132" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>公司名称</th>
+                                        <th>项目名称</th>
+                                        <th>结算时间</th>
+                                        <th>投运时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process13_chart6">
+                                <table class="state_table table133" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>公司名称</th>
+                                        <th>项目名称</th>
+                                        <th>结算金额</th>
+                                        <th>概算金额</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt14">
+                    <div class="main-drt-top process14"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt15">
+                    <div class="main-drt-top process15"></div>
+                    <div class="main-drt-bottom">
+                        <div class="process-chart">
+                            <div class="process15_chart1">
+                                <p class="process-title">项目决算异常监测</p>
+                                <div id="process15_chart1"></div>
+                            </div>
+                            <div class="process15_chart2">
+                                <p class="process-title">决算转资偏差率</p>
+                                <div id="process15_chart2"></div>
+                            </div>
+                            <div class="process15_chart3">
+                                <table class="state_table table151" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>公司名称</th>
+                                        <th>项目名称</th>
+                                        <th>决算时间</th>
+                                        <th>投产时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="process15_chart4">
+                                <table class="state_table table152" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="state_table_title">
+                                        <th>公司名称</th>
+                                        <th>项目名称</th>
+                                        <th>项目转资金额</th>
+                                        <th>总投资金额</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国网新源水电白山电厂白山电量采集关口表改造</td>
+                                        <td>白山厂</td>
+                                        <td>2013</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股回龙公司1号、2号机组A级检修</td>
+                                        <td>回龙</td>
+                                        <td>2014</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>国网新源控股西龙池公司“五系统一中心”建设</td>
+                                        <td>回龙</td>
+                                        <td>2015</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt16">
+                    <div class="main-drt-top process16"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt17">
+                    <div class="main-drt-top process17"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+                <div class="datail-rt datail-rt18">
+                    <div class="main-drt-top process18"></div>
+                    <div class="main-drt-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--遮罩层，回退按钮-->
+	    <a href="index1.html" class="main-back"></a>
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/process5-chart.js"></script>
+    <script src="js/process7-chart.js"></script>
+    <script src="js/process2-chart.js"></script>
+    <script src="js/process3-chart.js"></script>
+    <script src="js/process4-chart.js"></script>
+    <script src="js/process10-chart.js"></script>
+    <script src="js/process13-chart.js"></script>
+    <script src="js/process15-chart.js"></script>
+    <script>
+        $(".main-lf2").find("p").on("click",function(){
+            var thisIndex=$(this).parents("li").index();
+            alert('第'+(thisIndex+1)+'节点：'+$(this).find("em").text());
+            $(".main-lf2").find("li").eq(thisIndex).find("p").addClass("active").parents("li").siblings().find("p").removeClass("active");
+            $(".main-details-rt").find(".datail-rt").eq(thisIndex).addClass("active").siblings().removeClass("active");
+        })
+    </script>
+</body>
+</html>

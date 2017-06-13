@@ -1,0 +1,246 @@
+.main{width:8400px;height:4200px; margin:0 auto;background: linear-gradient(#081f2b,#102a39,#06212f);}
+.mainBg{width:8400px;height:4200px;background: url("../images/mainBg2.jpg") no-repeat;}
+/*.back1{width:208px;height:163px;background: url("../images/back1.png") no-repeat;}*/
+.back12{width:208px;height:163px;background: url("../images/back12.png") no-repeat;}
+.main-title{color:#97eefc;font-family: "方正综艺";font-size:129px;width:2808px;height:168px;background:url(../images/main-titleBg.png) no-repeat center;text-align:center;line-height:168px;position:absolute;left:2604px;top:138px;}
+/*左*/
+/*--.main-lf1 导航左侧相关内容--*/
+.main-lf1{float:left;width:1220px;height:3565px;margin-left:572px;margin-top:310px;}
+.main-lf1 p{position:absolute;width:574px;height:79px;line-height:80px;text-align:center;color:#010c20;font-size:45px;left:571px;background:url(../images/careword-1.png) no-repeat center;}
+.main-lf1 p.carenum-color{background:url(../images/careword-color-1.png) no-repeat center;}
+.main-lf1 p:nth-child(3){left:1224px;}
+.main-lf1 .careword-width{width:1225px;}
+.main-lf1 .careword-width{background:url(../images/careword-width-1.png) no-repeat center;}
+.main-lf1 .careword-width.carenum-color{background:url(../images/careword-widthcolor-1.png) no-repeat center;}
+.main-lf1 span{position:absolute;color:#addefa;text-shadow:0 0 10px #addefa;font-size:52px;left:814px;}
+.main-lf1 span:nth-child(4){left:1464px;}
+.main-lf1 span.carenum-color{color:#9ff9f9;text-shadow:0 0 10px #9ff9f9;}
+.main-lf1 .careword1{top:361px;width:404px;background:url(../images/careword1-1.png) no-repeat center;}
+.main-lf1 .carenum1{left:725px;top:457px;}
+.main-lf1 .careword2{top:361px;}
+.main-lf1 .carenum2{top:457px;}
+.main-lf1 .careword3{top:567px;}
+.main-lf1 .carenum3{left:1144px;top:647px;}
+.main-lf1 .careword4{top:796px;}
+.main-lf1 .carenum4{top:881px;}
+.main-lf1 .careword6{top:990px;}
+.main-lf1 .carenum6{left:1144px;top:1069px;}
+.main-lf1 .careword7{top:1166px;}
+.main-lf1 .carenum7{top:1243px;}
+.main-lf1 .careword9{top:1342px;}
+.main-lf1 .carenum9{top:1418px;}
+.main-lf1 .careword11{top:1542px;}
+.main-lf1 .carenum11{left:1144px;top:1622px;}
+.main-lf1 .careword12{top:1742px;}
+.main-lf1 .carenum12{top:1818px;}
+.main-lf1 .careword14{top:1915px;width:303px;background:url(../images/careword14-1.png) no-repeat center;}
+.main-lf1 .carenum14{left:664px;top:1997px;}
+.main-lf1 p.careword15{left:919px;top:1915px;width:404px;background:url(../images/careword1-1.png) no-repeat center;}
+.main-lf1 span.carenum15{left:1069px;top:1997px;}
+.main-lf1 p.careword16{left:1379px;top:1915px;width:404px;background:url(../images/careword1-1.png) no-repeat center;}
+.main-lf1 span.carenum16{left:1519px;top:1997px;}
+.main-lf1 .careword17{top:2113px;}
+.main-lf1 .carenum17{top:2208px;}
+.main-lf1 .careword19{top:2502px;}
+.main-lf1 .carenum19{top:2591px;}
+.main-lf1 .careword21{top:2716px;}
+.main-lf1 .carenum21{top:2813px;}
+.main-lf1 .careword23{top:2917px;}
+.main-lf1 .carenum23{top:2999px;}
+.main-lf1 .careword25{top:3118px;}
+.main-lf1 .carenum25{top:3215px;}
+.main-lf1 .careword27{top:3326px;}
+.main-lf1 .carenum27{left:1144px;top:3408px;}
+.main-lf1 .careword28{top:3493px;}
+.main-lf1 .carenum28{top:3574px;}
+.main-lf1 .careword30{top:3686px;}
+.main-lf1 .carenum30{left:1144px;top:3773px;}
+/*--.main-lf2（导航）--*/
+.main-lf2{float:left;width:508px;height:3638px;margin-left:37px;margin-top:310px;}
+.main-lf2 .nav-href1 {position:absolute;padding-left:85px;width:324px;height:103px;text-align:center;background:url(../images/nav-href1Bg.png) no-repeat center top;left:1856px;}
+.main-lf2 .nav-href1.active{z-index:999;background:url(../images/nav-href1Bg-active.png) no-repeat center top;}
+.main-lf2 .nav-href1  a{position:static;padding-top:20px;width:258px;height:85px;font-size:25px;}
+.main-lf2 .nav-href2 {position:absolute;padding-left:85px;width:361px;height:153px;text-align:center;background:url(../images/nav-href2Bg.png) no-repeat center top;left:1840px;}
+.main-lf2 .nav-href2.active{width:369px;z-index:999;background:url(../images/nav-href2Bg-active.png) no-repeat center top;}
+.main-lf2 .nav-href2  a{position:static;padding-top:16px;width:292px;height:136px;line-height:57px;font-size:36px;}
+.main-lf2 a em{font-style:normal;display:block;color:#fffefe;}
+.main-lf2 a span{display:block;line-height:31px;color:#041f27;}
+.main-lf2 .nav-href1 span{font-size:18px;}
+.main-lf2 .nav-href2 span{font-size:22px;}
+.main-lf2 a{position:absolute;display:block;cursor:pointer;text-align:center;}
+.main-lf2 .nav-alert1{width:121px;height:103px;background:url(../images/nav-alert1Bg.png) no-repeat center bottom;left:2210px;}
+.main-lf2 .nav-alert2{width:121px;height:153px;background:url(../images/nav-alert2Bg.png) no-repeat center top;left:2227px;}
+.main-lf2 .href-d1{top:358px;}
+.main-lf2 .href-d2{top:531px;}
+.main-lf2 .href-d3{top:763px;}
+.main-lf2 .href-d4{top:983px;}
+.main-lf2 .href-d5{top:1152px;}
+.main-lf2 .alert-d5{left:2221px;top:1152px;}
+.main-lf2 .href-d6{top:1329px;}
+.main-lf2 .alert-d6{left:2221px;top:1329px;}
+.main-lf2 .href-d7{top:1506px;}
+.main-lf2 .href-d8{top:1734px;}
+.main-lf2 .href-d9{top:1909px;}
+.main-lf2 .href-d10{top:2087px;}
+.main-lf2 .href-d10 a{line-height:38px;font-size:30px;}
+.main-lf2 .href-d11{top:2316px;}
+.main-lf2 .href-d12{top:2502px;}
+.main-lf2 .href-d13{top:2679px;}
+.main-lf2 .alert-d13{left:2240px;top:2679px;}
+.main-lf2 .href-d14{top:2911px;}
+.main-lf2 .href-d15{top:3088px;}
+.main-lf2 .alert-d15{left:2240px;top:3088px;}
+.main-lf2 .href-d16{top:3317px;}
+.main-lf2 .href-d17{top:3490px;}
+.main-lf2 .href-d18{top:3675px;}
+.main-lf2 .href-d19{top:3849px;padding-top:14px;font-size:28px;}
+
+
+/*右*/
+.main-rt{float:right;margin-right:245px;margin-top:322px;width:2650px;height:3573px;}
+.box2{height:1035px;margin-bottom:48px;}
+/*形象进度*/
+.xxjd{float:left;width:810px;height:100%;position:relative;}
+.xxjd>span{margin-left:330px;margin-top:20px;color:#b7e3e9;font-size:65px;}
+.xxjd .xxjd-4a{color:#fff;font-size:54px;position:absolute;font-family:numBrand;font-weight:bold;}
+.xxjd .jx-01{left:215px;top:390px;}
+.xxjd .jx-02{left:193px;top:707px;}
+.xxjd .jg-01{right:177px;top:390px;}
+.xxjd .jg-02{right:135px;top:723px;}
+/*环节异动数*/
+.hjyds{float:right;width:1712px;height:100%;position:relative;}
+.hjyds>span{margin-left:660px;color:#b7e3e9;font-size:65px;}
+/*18个异动状态*/
+.ydStation a{position:absolute;color:#fff;font-size:60px;text-align: center;line-height:92px;cursor:pointer;}
+.hjyds .station1{width:102px;height:86px;background: url("../images/icon1.png") no-repeat;}
+.hjyds .station2{width:102px;height:86px;background: url("../images/icon2.png") no-repeat;}
+.hjyds .station3{width:91px;height:143px;background: url("../images/icon3.png") no-repeat;}
+.hjyds .station4{width:91px;height:143px;background: url("../images/icon4.png") no-repeat;}
+.hjyds .station5{width:91px;height:143px;background: url("../images/icon5.png") no-repeat;}
+.hjyds .station6{width:91px;height:143px;background: url("../images/icon6.png") no-repeat;}
+
+.hjyds .stat-0{left:106px;top:148px;}
+.hjyds .stat-1{left:414px;top:148px;}
+.hjyds .stat-2{left:792px;top:148px;}
+.hjyds .stat-3{left:1270px;top:148px;}
+.hjyds .stat-4{right:46px;top:155px;}
+.hjyds .stat-5{left:982px;top:324px;}
+.hjyds .stat-6{left:561px;top:324px;}
+.hjyds .stat-7{left:220px;top:324px;}
+.hjyds .stat-8{left:-1px;top:342px;}
+.hjyds .stat-9{left:402px;top:502px;}
+.hjyds .stat-10{left:1010px;top:502px;}
+.hjyds .stat-11{left:1350px;top:502px;}
+.hjyds .stat-12{right:38px;top:512px;}
+.hjyds .stat-13{right:398px;top:678px;}
+.hjyds .stat-14{right:712px;top:678px;}
+.hjyds .stat-15{left:518px;top:678px;}
+.hjyds .stat-16{left:167px;top:678px;}
+.hjyds .stat-17{left:214px;top:854px;}
+/*18个环形节点内容*/
+.hjyds .content,.hjyds  [class^="content4-"],.hjyds  [class^="content8-"],.hjyds  [class^="content12-"]{
+    position:absolute;color:#fffffd;font-size:45px;}
+.hjyds .content0{left:75px;top:230px;}
+.hjyds .content1{left:402px;top:230px;}
+.hjyds .content2{left:722px;top:230px;}
+.hjyds .content3{left:1175px;top:230px;}
+/*物资\服务采购申请*/
+.hjyds  .content4-1{left:1594px;top:176px;}
+.hjyds  .content4-2{left:1612px;top:226px;}
+.hjyds  .content4-3{left:1620px;top:270px;}
+.hjyds  .content4-4{left:1584px;top:294px;}
+.hjyds  .content4-5{left:1542px;top:320px;}
+.hjyds  .content4-6{left:1488px;top:320px;}
+.hjyds  .content4-7{left:1434px;top:320px;}
+.hjyds  .content4-8{left:1374px;top:320px;}
+.hjyds  .content4-9{left:1313px;top:320px;}
+
+.hjyds .content5{left:898px;top:406px;}
+.hjyds .content6{left:513px;top:401px;}
+.hjyds .content7{left:180px;top:406px;}
+/*物资领用*/
+.hjyds  .content8-1{left:20px;top:386px;}
+.hjyds  .content8-2{left:28px;top:438px;}
+.hjyds  .content8-3{left:64px;top:480px;}
+.hjyds  .content8-4{left:117px;top:494px;}
+
+.hjyds .content9{left:339px;top:584px;}
+.hjyds .content10{left:981px;top:584px;}
+.hjyds .content11{left:1320px;top:580px;}
+/*项目结算*/
+.hjyds  .content12-1{left:1610px;top:568px;}
+.hjyds  .content12-2{left:1601px;top:623px;}
+.hjyds  .content12-3{left:1559px;top:664px;}
+.hjyds  .content12-4{left:1505px;top:672px;}
+
+.hjyds .content13{left:1221px;top:757px;}
+.hjyds .content14{left:860px;top:757px;}
+.hjyds .content15{left:477px;top:761px;}
+.hjyds .content16{left:117px;top:759px;}
+.hjyds .content17{left:154px;top:933px;}
+.hjyds .content18{left:650px;top:933px;}
+
+/*3个echarts图表*/
+.ztgl_2charts{width:100%;height:680px;margin-bottom:32px;}
+.ztgl_2charts>span{width:880px;height:100px;line-height:98px;text-align:center;margin-left:104px;display:block;color:#b7e3e9;font-size:65px;}
+#jgxm_chart{width:50%;height:580px;margin-bottom:32px;float:left;}
+#jxxm_chart{width:50%;height:580px;margin-bottom:32px;float:left;}
+#sjjd_chart{clear:both;width:100%;height:884px;margin-bottom:32px;}
+#zjjd_chart{width:100%;height:865px;}
+
+/*--.overlayBg，.main-back 遮罩层，回退按钮--*/
+.overlayBg{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.7);left:0;top:0;right:0;bottom:0;z-index:995;}
+.main-back{display:none;position:absolute;width:133px;height:209px;cursor:pointer;background:url(../images/main-back.png) no-repeat;left:189px;top:1901px;z-index:996;}
+
+/*--.nav-popup 导航弹框--*/
+.nav-popup{display:none;width:4285px;height:1604px;position:absolute;background:url(../images/popup-alert1.png) no-repeat center;z-index:998;left:2379px;}
+.nav-popup.popup-d1{top:322px;}
+.nav-popup.popup-d5{top:492px;}
+.nav-popup.popup-d6{top:662px;}
+.nav-popup.popup-d7{top:832px;}
+.nav-popup.popup-d8{top:1052px;}
+.nav-popup.popup-d9{top:1222px;}
+.nav-popup.popup-d10{top:1442px;}
+.nav-popup.popup-d11{top:1652px;}
+.nav-popup.popup-d12{top:1812px;}
+.nav-popup.popup-d13{top:2012px;}
+.nav-popup.popup-d14{top:2142px;}
+
+/*弹框关闭按钮定位*/
+.nav-popup-chart{height:1492px;padding:80px 74px 24px 16px;}
+.main-nav-popup .close-btn{width:83px;height:83px;position:absolute;right:0;top:0;cursor:pointer;}
+/*项目储备*/
+#xmcb_chart1{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmcb_chart2{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmcb_chart3{width:1342px;height:1492px;float:left;margin-left:1%;}
+/*-3年度计划及预算-*/
+#ndjhjys_chart1{width:2013px;height:1492px;float:left;margin-left:1%;}
+#ndjhjys_chart2{width:2013px;height:1492px;float:left;margin-left:1%;}
+/*-4年度工作计划-*/
+/*#ndgzjh_chart1{width:2013px;height:1492px;float:left;margin-left:1%;}
+#ndgzjh_chart2{width:2013px;height:1492px;float:left;margin-left:1%;}*/
+/*-7合同签订-*/
+#htqd_chart1{width:1342px;height:725px;float:left;margin-left:1%;}
+#htqd_chart2{width:1342px;height:725px;float:left;margin-left:1%;}
+#htqd_chart3{width:1342px;height:725px;float:left;margin-left:1%;}
+#htqd_chart4{width:1342px;height:725px;float:left;margin-left:1%;margin-top:42px;}
+#htqd_chart5{width:1342px;height:725px;float:left;margin-left:1%;margin-top:42px;}
+#htqd_chart6{width:1342px;height:725px;float:left;margin-left:1%;margin-top:42px;}
+/*-10项目实施-*/
+#xmss_chart1{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmss_chart2{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmss_chart3{width:1342px;height:1492px;float:left;margin-left:1%;}
+/*-13项目结算-*/
+#xmjs_chart1{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmjs_chart2{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmjs_chart3{width:1342px;height:1492px;float:left;margin-left:1%;}
+/*-15项目决算-*/
+#xmjues_chart1{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmjues_chart2{width:1342px;height:1492px;float:left;margin-left:1%;}
+#xmjues_chart3{width:1342px;height:1492px;float:left;margin-left:1%;}
+
+/*--弹框9 4个echarts图表--*/
+#wzlx{float:left;width:1529px;height:1273px;}
+#eachUnit{float:left;width:3672px;height:1273px;}
+#eachYear{float:left;width:1529px;height:1117px;}
+#eachMonth{float:left;width:3672px;height:1117px;}
